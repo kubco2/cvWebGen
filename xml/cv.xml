@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cv-xhtml.xsl"?>
+<ecv>
+	<personal>
+		<name>Peter Greň</name>
+		<adress>Pri štepnici 15, 085 01 Bardejov, Slovenská republika</adress>
+		<phone>+420 723 635 509</phone>
+		<email>peter@gren.sk</email>
+		<nationality>Slovenská</nationality>
+		<dateofbirth>10.12.1990</dateofbirth>
+		<gender>Muž</gender>
+	</personal>
+	<work>
+		<dates>2010</dates>
+		<position>Externý kóder a vývojár webových aplikácií</position>
+		<employer>DesignIT</employer>
+		<activities>Kódovanie dodaných grafických návrhov, programovanie, CMS</activities>
+		<sector>Webdesign</sector>
+	</work>
+	<work>
+		<dates>2008 - 2010</dates>
+		<position>Externý kóder a vývojár webových aplikácií</position>
+		<employer>Datex</employer>
+		<activities>Kódovanie dodaných grafických návrhov, programovanie, CMS</activities>
+		<sector>Webdesign</sector>
+	</work>
+	<work>
+		<dates>2007 - 2009</dates>
+		<position>Webdesigner, kóder a vývojár webových aplikácií, technik </position>
+		<employer>MediaART</employer>
+		<activities>Návrh a realizácia webových riešení</activities>
+		<sector>Webdesign, Predaj a servis výpočtovej techniky</sector>
+	</work>
+	<education>
+		<dates>2010 - súčasnosť</dates>
+		<organisation>Masaryková Univerzita v Brne</organisation>
+		<field>Počítačové systémy a spracovanie dát</field>
+	</education>
+	<education>
+		<dates>2006 - 2010</dates>
+		<organisation>Gymnázium Leonarda Stöckela v Bardejove</organisation>
+		<field>Všeobecne vzdelávanie</field>
+	</education>
+	<skills>
+		<tongue>
+      Slovenský jazyk
+    </tongue>
+		<language level="pokročilý">
+      Anglický jazyk
+    </language>
+		<language level="začiatočník">
+      Ruský jazyk
+    </language>
+		<language level="pokročilý">
+      Český jazyk
+    </language>
+		<computer>Perfektná znalosť využívania internetu a jeho služieb</computer>
+		<computer>Znalosť jazykov XHTML, CSS, PHP, znalosť technológie MySQL</computer>
+		<computer>Schopnosť využívať ďalšie značkovacie jazyky, Javasript a AJAX</computer>
+		<computer>Štandardy, použiteľnosť, prístupnosť, SEO, sémantika, štruktúra</computer>
+		<computer>Základná administrácia webového servera Apache, PHP a MySQL</computer>
+		<computer>Základné znalosti aplikácií na prácu s webovou grafikou</computer>
+		<computer>Pokročilá práca s mnohými prostriedkami informačných technológií</computer>
+		<computer>Výborna znalosť OS Windows - používanie, administrácia, servis</computer>
+		<computer>Pokročilá práca s kancelárskym balíkom Office</computer>
+		<computer>Skúsenosti s rôznymi distribúciami operačného systému Linux</computer>
+		<computer>Skúsenosť s jazykmi C++, Java, JavaScript, Perl</computer>
+		<computer>Skúsenosť s prostrediami Delphi a Microsoft Visual C Sharp</computer>
+		<computer>Znalosti princípov audiovizuálnych formátov a ich spracovania</computer>
+		<computer>Budovanie a administrácia malých (aj multiplatformových) sietí</computer>
+		<computer>Bohaté praktické skúsenosti s počítačovým hardwarom (x86)</computer>
+		<driving>B, aktívny vodič</driving>
+		<other>Vynikajúce organizačné schopnosti</other>
+		<other>Schopnosť pracovať pod tlakom, samostatne alebo v tíme</other>
+		<other>Príjemné vystupovanie, dobrý verbálny aj písomný prejav</other>
+		<other>Vyhľadávanie a analýza riešení pre neznáme zadnia</other>
+		<other>Schopnosť naštudovať a efektívne aplikovať vhodné riešenie</other>
+		<interests>Technológie, programovanie, webdesign, hardware, internet</interests>
+		<interests>Politika, ekonómia, hudba, hra na gitare, plávanie, cyklistika</interests>
+		<strenghts>Precíznosť, logická a konzistentná práca</strenghts>
+		<strenghts>Analytické myslenie a prirodzené chápanie informatiky</strenghts>
+		<strenghts>Záujem preskúmať riešenia do hĺbky, pochopiť ako fungujú</strenghts>
+		<strenghts>Flexibilita, odvaha skúšať nové riešenia, inovácie</strenghts>
+		<strenghts>Veľký záujem učiť sa nové veci, vysoká motivácia</strenghts>
+		<strenghts>Vynikajúca znalosť internetových technológií</strenghts>
+		<strenghts>Široký prehľad o technologických riešeniach</strenghts>
+	</skills>
+</ecv>
