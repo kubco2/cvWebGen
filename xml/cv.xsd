@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ecv" type="ecvType"/>
+
+    <xs:complexType name="ecvType">
+        <xs:sequence>
+            <xs:element type="personalType" name="personal"/>
+            <xs:element type="workType" name="work" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="educationType" name="education" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="skillsType" name="skills"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="personalType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:string" name="adress"/>
+            <xs:element type="xs:string" name="phone"/>
+            <xs:element name="email">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3}))"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="nationality"/>
+            <xs:element name="dateofbirth">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <!--
+                          ((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1})) day
+                          ((0[1-9]{1})|([1-9]{1})|(1[0-2]{1})) month
+                          ([1-9]{1}[0-9]{3}) year
+                          day.month.year | year.month.day
+                        -->
+                        <xs:pattern value="(((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1}))\.((0[1-9]{1})|([1-9]{1})|(1[0-2]{1}))\.([1-9]{1}[0-9]{3}))|(([1-9]{1}[0-9]{3})\.((0[1-9]{1})|([1-9]{1})|(1[0-2]{1}))\.((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1})))"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="gender">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="male"/>
+                        <xs:enumeration value="female"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="workType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="dates"/>
+            <xs:element type="xs:string" name="position"/>
+            <xs:element type="xs:string" name="employer"/>
+            <xs:element type="xs:string" name="activities" minOccurs="0"/>
+            <xs:element type="xs:string" name="sector" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="educationType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="dates"/>
+            <xs:element type="xs:string" name="organisation"/>
+            <xs:element type="xs:string" name="field"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="skillsType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="tongue"/>
+            <xs:element type="languageType" name="language" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element type="xs:string" name="computer" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="driving"/>
+            <xs:element type="xs:string" name="other" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="interests" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="strenghts" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="languageType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="level" use="optional">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="novice"/>
+                            <xs:enumeration value="beginner"/>
+                            <xs:enumeration value="intermediate"/>
+                            <xs:enumeration value="advanced"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>
