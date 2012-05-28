@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
     <meta>
         <created>2012-05-24T16:01:51</created>
         <modified>2012-05-24T16:01:51</modified>
@@ -20,11 +20,11 @@
         <zip>123 41</zip>
         <state>Czech Republic</state>
     </address>
-    <contact>
-        <phone type="home">+420 777 231 252</phone>
-        <phone type="work">+420 603 523 623</phone>
-        <email>carlos@postas.es</email>
-    </contact>
+    <contacts>
+        <contact><phone type="home">+420 777 231 252</phone></contact>
+        <contact><phone type="work">+420 603 523 623</phone></contact>
+        <contact><email>carlos@postas.es</email></contact>
+    </contacts>
     <works>
         <work>
             <period>
@@ -62,4 +62,4 @@
     <languages>
         <language level="advanced">Angličtina</language>
     </languages>
-</ecv>
+</cv>

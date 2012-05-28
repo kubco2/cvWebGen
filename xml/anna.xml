@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
     <meta>
         <created>2012-05-24T16:12:33</created>
         <modified>2012-05-24T16:12:33</modified>
@@ -8,7 +8,6 @@
     </meta>
     <personal>
         <firstName>Anna</firstName>
-        <middleName></middleName>
         <lastName>Cermakova</lastName>
         <dateofbirth>1985-03-15</dateofbirth>
         <gender>female</gender>
@@ -20,11 +19,11 @@
         <zip>545 12</zip>
         <state>Czech Republic</state>
     </address>
-    <contact>
-        <phone type="home">+420 777 456 789</phone>
-        <phone type="work">+420 603 222 333</phone>
-        <email>anicka@email.cz</email>
-    </contact>
+    <contacts>
+        <contact><phone type="home">+420 777 456 789</phone></contact>
+        <contact><phone type="work">+420 603 222 333</phone></contact>
+        <contact><email>anicka@email.cz</email></contact>
+    </contacts>
     <works>
         <work>
             <period>
@@ -101,4 +100,4 @@
         <language level="advanced">Němčina</language>
         <language level="beginner">Ruština</language>
     </languages>
-</ecv>
+</cv>

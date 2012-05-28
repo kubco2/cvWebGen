@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
     <meta>
         <created>2012-08-24T16:12:33</created>
         <modified>2012-08-24T16:12:33</modified>
@@ -20,11 +20,11 @@
         <zip>676 15</zip>
         <state>Czech Republic</state>
     </address>
-    <contact>
-        <phone type="home">+420 777 451 312</phone>
-        <phone type="work">+420 603 312 425</phone>
-        <email>bara@email.cz</email>
-    </contact>
+    <contacts>
+        <contact><phone type="home">+420 777 451 312</phone></contact>
+        <contact><phone type="work">+420 603 312 425</phone></contact>
+        <contact><email>bara@email.cz</email></contact>
+    </contacts>
     <works>
         <work>
             <period>
@@ -105,4 +105,4 @@
     <languages>
         <language level="advanced">Angličtina</language>
     </languages>
-</ecv>
+</cv>

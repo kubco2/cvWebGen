@@ -2,13 +2,19 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="ecv">
+    <xs:element name="cv">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="meta" type="metaType"/>
-                <xs:element name="personal" type="personalType" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="contact" type="contactType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="personal" type="personalType"/>
+                <xs:element name="address" type="addressType"/>
+                <xs:element name="contacts">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="contact" type="contactType" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="works">
                     <xs:complexType>
                         <xs:sequence>
@@ -42,7 +48,6 @@
     </xs:element>
 
     <!-- Types definition -->
-
     <xs:complexType name="metaType">
         <xs:sequence>
             <xs:element name="created" type="xs:dateTime"/>
@@ -51,7 +56,8 @@
             <xs:element name="privacy">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="private|public"/>
+                        <xs:enumeration value="private"/>
+                        <xs:enumeration value="public"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -61,13 +67,14 @@
     <xs:complexType name="personalType">
         <xs:sequence>
             <xs:element name="firstName" type="xs:string"/>
-            <xs:element name="middleName" type="xs:string"/>
+            <xs:element name="middleName" type="xs:string" minOccurs="0"/>
             <xs:element name="lastName" type="xs:string"/>
             <xs:element name="dateofbirth" type="xs:date"/>
             <xs:element name="gender">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="male|female"/>
+                        <xs:enumeration value="male"/>
+                        <xs:enumeration value="female"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -81,13 +88,13 @@
             <xs:element name="city" type="xs:string"/>
             <xs:element name="zip" type="xs:string"/>
             <xs:element name="state" type="xs:string"/>
-            <xs:element name="description" type="xs:string" minOccurs="0" />
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="contactType">
-        <xs:sequence>
-            <xs:element name="phone" minOccurs="0" maxOccurs="unbounded">
+        <xs:choice>
+            <xs:element name="phone">
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
@@ -96,9 +103,9 @@
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="email" type="emailType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="website" type="xs:string" minOccurs="0" />
-        </xs:sequence>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="website" type="xs:anyURI"/>
+        </xs:choice>
     </xs:complexType>
 
     <xs:complexType name="workType">
@@ -146,8 +153,8 @@
 
     <xs:complexType name="periodType">
         <xs:sequence>
-            <xs:element name="from" type="dateType" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="to" type="dateType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="from" type="dateType"/>
+            <xs:element name="to" type="dateType"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -163,7 +170,7 @@
             <xs:element name="month" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:integer">
-                        <xs:minExclusive value="1"/>
+                        <xs:minInclusive value="1"/>
                         <xs:maxInclusive value="12"/>
                     </xs:restriction>
                 </xs:simpleType>
@@ -171,7 +178,7 @@
             <xs:element name="day" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>
                     <xs:restriction base="xs:integer">
-                        <xs:minExclusive value="1"/>
+                        <xs:minInclusive value="1"/>
                         <xs:maxInclusive value="31"/>
                     </xs:restriction>
                 </xs:simpleType>
