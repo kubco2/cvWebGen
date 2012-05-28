@@ -21,9 +21,9 @@
         <state>Czech Republic</state>
     </address>
     <contacts>
-        <contact><phone type="home">+420 777 231 252</phone></contact>
-        <contact><phone type="work">+420 603 523 623</phone></contact>
-        <contact><email>carlos@postas.es</email></contact>
+        <phone type="home">+420 777 231 252</phone>
+        <phone type="work">+420 603 523 623</phone>
+        <email>carlos@postas.es</email>
     </contacts>
     <works>
         <work>

@@ -10,9 +10,19 @@
                 <xs:element name="address" type="addressType"/>
                 <xs:element name="contacts">
                     <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="contact" type="contactType" minOccurs="1" maxOccurs="unbounded"/>
-                        </xs:sequence>
+                        <xs:choice minOccurs="1" maxOccurs="unbounded">
+                            <xs:element name="phone">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="type" type="xs:string" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" type="emailType"/>
+                            <xs:element name="website" type="xs:anyURI"/>
+                        </xs:choice>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="works">
@@ -90,22 +100,6 @@
             <xs:element name="state" type="xs:string"/>
             <xs:element name="description" type="xs:string" minOccurs="0"/>
         </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="contactType">
-        <xs:choice>
-            <xs:element name="phone">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="xs:string" use="required"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="email" type="emailType"/>
-            <xs:element name="website" type="xs:anyURI"/>
-        </xs:choice>
     </xs:complexType>
 
     <xs:complexType name="workType">

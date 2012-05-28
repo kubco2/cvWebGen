@@ -20,9 +20,9 @@
         <state>Czech Republic</state>
     </address>
     <contacts>
-        <contact><phone type="home">+420 777 456 789</phone></contact>
-        <contact><phone type="work">+420 603 222 333</phone></contact>
-        <contact><email>anicka@email.cz</email></contact>
+        <phone type="home">+420 777 456 789</phone>
+        <phone type="work">+420 603 222 333</phone>
+        <email>anicka@email.cz</email>
     </contacts>
     <works>
         <work>

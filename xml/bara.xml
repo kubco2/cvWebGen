@@ -21,9 +21,9 @@
         <state>Czech Republic</state>
     </address>
     <contacts>
-        <contact><phone type="home">+420 777 451 312</phone></contact>
-        <contact><phone type="work">+420 603 312 425</phone></contact>
-        <contact><email>bara@email.cz</email></contact>
+        <phone type="home">+420 777 451 312</phone>
+        <phone type="work">+420 603 312 425</phone>
+        <email>bara@email.cz</email>
     </contacts>
     <works>
         <work>
