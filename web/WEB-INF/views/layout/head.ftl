@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<link rel="stylesheet" href="/resources/css/bootstrap.css" />
+	<link rel="stylesheet" href="resources/css/bootstrap.css" />
 
-	<script type="text/javascript" src="/resources/js/jquery-1.7.1.js"></script>
-	<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/resources/js/project.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/js/project.js"></script>
 </head>
 
 <body>
