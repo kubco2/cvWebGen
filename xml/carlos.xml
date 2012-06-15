@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+    <meta>
+        <created>2012-05-24T16:01:51</created>
+        <modified>2012-05-24T16:01:51</modified>
+        <email>carlos@example.com</email>
+        <privacy>public</privacy>
+    </meta>
+    <personal>
+        <firstName>Carlos</firstName>
+        <middleName>Los</middleName>
+        <lastName>Amores</lastName>
+        <dateofbirth>1967-01-01</dateofbirth>
+        <gender>male</gender>
+        <nationality>Spanish</nationality>
+    </personal>
+    <address>
+        <street>Krnenska 44</street>
+        <city>Praha</city>
+        <zip>123 41</zip>
+        <state>Czech Republic</state>
+    </address>
+    <contacts>
+        <phone type="home">+420 777 231 252</phone>
+        <phone type="work">+420 603 523 623</phone>
+        <email>carlos@postas.es</email>
+    </contacts>
+    <works>
+        <work>
+            <period>
+                <from><year>1990</year></from>
+                <to><year>2011</year></to>
+            </period>
+            <employer>ČSA a.s.</employer>
+            <position>IT konzultant</position>
+            <activities>systémový inženýr, správa a podpora aplikací UNIXInformix a Windows.</activities>
+        </work>
+    </works>
+    <educations>
+       <education>
+           <period>
+               <from><year>1979</year></from>
+               <to><year>1979</year></to>
+           </period>
+           <organisation>SPŠ Most - elektrotechnika</organisation>
+           <description>Středoškolské nebo vyučení s maturitou</description>
+       </education>
+        <education>
+            <period>
+                <from><year>1998</year></from>
+                <to><year>2001</year></to>
+            </period>
+            <organisation>SOŠ a SOU spojů a elektrotechniky</organisation>
+            <description>Středoškolské nebo vyučení s maturitou</description>
+        </education>
+    </educations>
+    <skills>
+        <skill name="Operační systémy">MS Windows XP</skill>
+        <skill name="Běžné programy">MS Word</skill>
+        <skill name="Databázové systémy">SQL</skill>
+    </skills>
+    <languages>
+        <language level="advanced">Angličtina</language>
+    </languages>
+</cv>

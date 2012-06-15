@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+    <meta>
+        <created>2012-08-24T16:12:33</created>
+        <modified>2012-08-24T16:12:33</modified>
+        <email>bara@example.com</email>
+        <privacy>private</privacy>
+    </meta>
+    <personal>
+        <firstName>Bara</firstName>
+        <middleName></middleName>
+        <lastName>Rikovska</lastName>
+        <dateofbirth>1967-04-01</dateofbirth>
+        <gender>female</gender>
+        <nationality>Czech</nationality>
+    </personal>
+    <address>
+        <street>Kolínska 44</street>
+        <city>Nymburk</city>
+        <zip>676 15</zip>
+        <state>Czech Republic</state>
+    </address>
+    <contacts>
+        <phone type="home">+420 777 451 312</phone>
+        <phone type="work">+420 603 312 425</phone>
+        <email>bara@email.cz</email>
+    </contacts>
+    <works>
+        <work>
+            <period>
+                <from>
+                    <year>2009</year>
+                    <month>10</month>
+                </from>
+                <to>
+                    <year>2010</year>
+                    <month>11</month>
+                </to>
+            </period>
+            <employer>Dětský domov se školou Býchory</employer>
+            <position>Vychovatel</position>
+            <activities>Školství, výuka, vzdělání</activities>
+        </work>
+        <work>
+            <period>
+                <from>
+                    <year>2000</year>
+                </from>
+                <to>
+                    <year>2006</year>
+                </to>
+            </period>
+            <employer>Plaček s.r.o.</employer>
+            <position>Hlavní účetní</position>
+            <activities>Hlavní účetní </activities>
+            <sector>Ekonomika a finance</sector>
+        </work>
+        <work>
+            <period>
+                <from>
+                    <year>2011</year>
+                    <month>3</month>
+                </from>
+                <to>
+                    <year>2012</year>
+                    <month>9</month>
+                </to>
+            </period>
+            <employer>Oblastní nemocnice Kolín a. s.</employer>
+            <position>Ergoterapeut</position>
+            <activities>Práce s pacienty na oddělení neurologie, geriatrie,interny,ARO.(Basální stimulace, cvičení,kognitivní rhb.)</activities>
+            <sector>Zdravotnictví</sector>
+        </work>
+    </works>
+    <educations>
+       <education>
+           <period>
+               <from><year>2003</year></from>
+               <to><year>2005</year></to>
+           </period>
+           <organisation>Vyšší odborná škola v Mostě</organisation>
+           <description>Diplomovaný ergoterapeut</description>
+       </education>
+        <education>
+            <period>
+                <from><year>2006</year></from>
+                <to><year>2008</year></to>
+            </period>
+            <organisation>Univerzita Hradec Králové</organisation>
+            <description>Sociálně výchovná péče o smyslově postižené</description>
+        </education>
+        <education>
+            <period>
+                <from><year>2008</year></from>
+                <to><year>2010</year></to>
+            </period>
+            <organisation>Univerzita Hradec Králové</organisation>
+            <description>Management rehabilitační činnosti ve speciálních zařízeních a speciální pedagogika</description>
+        </education>
+    </educations>
+    <skills>
+        <skill name="Operační systémy">MS Windows XP</skill>
+        <skill name="Běžné programy">MS Word</skill>
+    </skills>
+    <languages>
+        <language level="advanced">Angličtina</language>
+    </languages>
+</cv>
