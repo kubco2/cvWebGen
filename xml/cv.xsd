@@ -1,42 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="ecv" type="ecvType"/>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:complexType name="ecvType">
+    <xs:element name="cv">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="meta" type="metaType"/>
+                <xs:element name="personal" type="personalType"/>
+                <xs:element name="address" type="addressType"/>
+                <xs:element name="contacts">
+                    <xs:complexType>
+                        <xs:choice minOccurs="1" maxOccurs="unbounded">
+                            <xs:element name="phone">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="type" type="xs:string" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" type="emailType"/>
+                            <xs:element name="website" type="xs:anyURI"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="works">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="work" type="workType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="educations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="education" type="educationType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="skills">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="skill" type="skillType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="languages">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="language" type="languageType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Types definition -->
+    <xs:complexType name="metaType">
         <xs:sequence>
-            <xs:element type="personalType" name="personal"/>
-            <xs:element type="workType" name="work" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element type="educationType" name="education" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element type="skillsType" name="skills"/>
+            <xs:element name="created" type="xs:dateTime"/>
+            <xs:element name="modified" type="xs:dateTime"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="privacy">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="private"/>
+                        <xs:enumeration value="public"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="personalType">
         <xs:sequence>
-            <xs:element type="xs:string" name="name"/>
-            <xs:element type="xs:string" name="adress"/>
-            <xs:element type="xs:string" name="phone"/>
-            <xs:element name="email">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3}))"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element type="xs:string" name="nationality"/>
-            <xs:element name="dateofbirth">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <!--
-                          ((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1})) day
-                          ((0[1-9]{1})|([1-9]{1})|(1[0-2]{1})) month
-                          ([1-9]{1}[0-9]{3}) year
-                          day.month.year | year.month.day
-                        -->
-                        <xs:pattern value="(((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1}))\.((0[1-9]{1})|([1-9]{1})|(1[0-2]{1}))\.([1-9]{1}[0-9]{3}))|(([1-9]{1}[0-9]{3})\.((0[1-9]{1})|([1-9]{1})|(1[0-2]{1}))\.((0[1-9]{1})|([1-9]{1})|([1-2]{1}[0-9]{1})|(3[0-1]{1})))"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="dateofbirth" type="xs:date"/>
             <xs:element name="gender">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -45,14 +88,25 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <xs:element type="xs:string" name="nationality"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addressType">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="zip" type="xs:string"/>
+            <xs:element name="state" type="xs:string"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="workType">
         <xs:sequence>
-            <xs:element type="xs:string" name="dates"/>
-            <xs:element type="xs:string" name="position"/>
+            <xs:element type="periodType" name="period"/>
             <xs:element type="xs:string" name="employer"/>
+            <xs:element type="xs:string" name="position"/>
             <xs:element type="xs:string" name="activities" minOccurs="0"/>
             <xs:element type="xs:string" name="sector" minOccurs="0"/>
         </xs:sequence>
@@ -60,22 +114,18 @@
 
     <xs:complexType name="educationType">
         <xs:sequence>
-            <xs:element type="xs:string" name="dates"/>
+            <xs:element type="periodType" name="period"/>
             <xs:element type="xs:string" name="organisation"/>
-            <xs:element type="xs:string" name="field"/>
+            <xs:element type="xs:string" name="description"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="skillsType">
-        <xs:sequence>
-            <xs:element type="xs:string" name="tongue"/>
-            <xs:element type="languageType" name="language" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element type="xs:string" name="computer" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element type="xs:string" name="driving"/>
-            <xs:element type="xs:string" name="other" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element type="xs:string" name="interests" maxOccurs="unbounded" minOccurs="0"/>
-            <xs:element type="xs:string" name="strenghts" maxOccurs="unbounded" minOccurs="0"/>
-        </xs:sequence>
+    <xs:complexType name="skillType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="name" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 
     <xs:complexType name="languageType">
@@ -94,5 +144,46 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
+
+    <xs:complexType name="periodType">
+        <xs:sequence>
+            <xs:element name="from" type="dateType"/>
+            <xs:element name="to" type="dateType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="dateType">
+        <xs:sequence>
+            <xs:element name="year" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1900"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="month" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="12"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="day" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="31"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3}))"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>
