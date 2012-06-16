@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cv.xsd">
+    <meta>
+        <created>2012-05-24T16:12:33</created>
+        <modified>2012-05-24T16:12:33</modified>
+        <email>jana@example.com</email>
+        <privacy>public</privacy>
+    </meta>
+    <personal>
+        <firstName>Anna</firstName>
+        <lastName>Cermakova</lastName>
+        <dateofbirth>1985-03-15</dateofbirth>
+        <gender>female</gender>
+        <nationality>Czech</nationality>
+    </personal>
+    <address>
+        <street>Soukenicka 15</street>
+        <city>Kolín</city>
+        <zip>545 12</zip>
+        <state>Czech Republic</state>
+    </address>
+    <contacts>
+        <phone type="home">+420 777 456 789</phone>
+        <phone type="work">+420 603 222 333</phone>
+        <email>anicka@email.cz</email>
+    </contacts>
+    <works>
+        <work>
+            <period>
+                <from>
+                    <year>1994</year>
+                </from>
+                <to>
+                    <year>2000</year>
+                </to>
+            </period>
+            <employer>Kobla s.r.o.</employer>
+            <position>Hlavní účetní</position>
+            <activities>mzdová účetní, majetková účetní ,celní deklarant,hlavní účetní</activities>
+            <sector>Ekonomika a finance</sector>
+        </work>
+        <work>
+            <period>
+                <from>
+                    <year>2000</year>
+                </from>
+                <to>
+                    <year>2006</year>
+                </to>
+            </period>
+            <employer>Plaček s.r.o.</employer>
+            <position>Hlavní účetní</position>
+            <activities>Hlavní účetní </activities>
+            <sector>Ekonomika a finance</sector>
+        </work>
+        <work>
+            <period>
+                <from>
+                    <year>2004</year>
+                </from>
+                <to>
+                    <year>2006</year>
+                </to>
+            </period>
+            <employer>Beaphar Earstern Europe s.r.o.</employer>
+            <position>Ekonom</position>
+            <activities>ekonom obce , zpracování mezd , celkového účetnictví rozpočtové organizace , staristiky , rozpočty, DPPO , DPFO závislá činnost</activities>
+            <sector>Ekonomika a finance</sector>
+        </work>
+        <work>
+            <period>
+                <from>
+                    <year>2006</year>
+                </from>
+                <to>
+                    <year>2012</year>
+                </to>
+            </period>
+            <employer>BT Audit s.r.o.</employer>
+            <position>Odborný asistent v ekonomii</position>
+            <activities>odborný asistent , ( spojeno s vedením účetnictví 9 firem , mzdy 9 firem , celkový servis klientům od prvočátečního zaúčtování až k předání daňového přiznání, silniční daně . daně z nemovitosti, DPPO, DPFO ze závislé činn, DPFO</activities>
+            <sector>Ekonomika a finance</sector>
+        </work>
+    </works>
+    <educations>
+       <education>
+           <period>
+               <from><year>1981</year></from>
+               <to><year>1985</year></to>
+           </period>
+           <organisation>Gymnázium Nymburk</organisation>
+           <description>Středoškolské nebo vyučení s maturitou</description>
+       </education>
+    </educations>
+    <skills>
+        <skill name="Operační systémy">MS Windows XP / Vista, MS Windows 98 / ME</skill>
+        <skill name="Běžné programy">Textový editor (MS Word), Tabulkový kalkulátor (MS Excel), Internet / e-mail</skill>
+    </skills>
+    <languages>
+        <language level="advanced">Němčina</language>
+        <language level="beginner">Ruština</language>
+    </languages>
+</cv>
