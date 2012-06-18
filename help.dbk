@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+        "http://docbook.org/xml/4.5b1/docbookx.dtd">
+<book>
+    <bookinfo>
+        <title>CvWebGen</title>
+        <author><firstname>Peter</firstname><surname>Greň</surname></author>
+        <author><firstname>Michal</firstname><surname>Valeš</surname></author>
+        <author><firstname>Jakub</firstname><surname>Jančo</surname></author>
+        <author><firstname>Pavel</firstname><surname>Doleček</surname></author>
+        <copyright><year>2012</year></copyright>
+    </bookinfo>
+    <preface>
+        <title>CvWebGen</title>
+        <para lang="en">CvWebGen is a web application, which allows user easily insert necessary information and create vitae. Vitae can be displayed, edited, or user can download it as a PDF file.</para>
+        <para lang="cs">...</para>
+        <para lang="sk">CvWebGen je webová aplikáci ktorá umožňuje vytvoriť životopis, jednoducho do neho vložiť potrebné informácie. K životopisu je možne sa neskôr vracať, upravovať ho a stiahnúť vo formáte PDF.</para>
+    </preface>
+    <!-- main page start-->
+    <chapter lang="en">
+        <title>Main webpage</title>
+        <para>On the main page are listed newest vitaes, user can create new vitae or after completing form with e-mail, he can retrieve link to vitae linked with the e-mail.</para>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+    </chapter>
+    <chapter lang="sk">
+        <title>Úvodná stránka</title>
+        <para>Na úvodnej stránke sa zobrazujú najnovšie verejné životopisy, je na nej možné vytvoriť nový životopis a nachádza sa na nej formulár ktorý umožňuje opakované zaslanie odkazov k životopisom podľa e-mailu.</para>
+    </chapter>
+    <!-- main page end-->
+    <!-- creating vitae start-->
+    <chapter lang="en">
+        <title>Creating vitae</title>
+        <para>Fill form with e-mail. After completing the form, user receive unique link on his new vitae and password. Password can be used for editing and deleting.</para>
+        <sect1>
+            <title>Public vs. private</title>
+            <para>User can choose whether his vitae will be public and displayed on the main page, or private which can be accessed only with unique link.</para>
+        </sect1>
+        <sect1>
+            <title>Form for entering information</title>
+            <para>After clicking on button "Create CV" follows page with form. Besides basic information, user can click on "+" and fill chosen type(work,knowledge,ability,contact,...) of information. After saving form, an e-mail is sent with unique links for show vitae or download as a PDF file.</para>
+        </sect1>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+        <sect1>
+            <title>...</title>
+            <para>...</para>
+        </sect1>
+        <sect1>
+            <title>...</title>
+            <para>...</para>
+        </sect1>
+    </chapter>
+    <chapter lang="sk">
+        <title>Vytvorenie životopisu</title>
+        <para>Pre vytvorenie životopisu je potrebné zadať e-mailovú adresu. Na túto adresu bude zaslaný jedinečný odkaz na stránku so životopisom a taktiež autentizačný kľúč určený na editáciu a mazanie životopisu.</para>
+        <sect1>
+            <title>Verejný vs. súkromný</title>
+            <para>Voľba Public zaistí že sa životopis bude zobrazovať na úvodnej stránke. K životopisu vytvorenému ako Private sa bude možné dostať len so znalosťou odkazu, ktorý bude po vytvorení zaslaný na email.</para>
+        </sect1>
+        <sect1>
+            <title>Formulár na zadávanie informácii</title>
+            <para>Po stlačení tlačítka "Create CV" nasleduje samotné vyplnenie informácií do životopisu. Okrem základných osobných infromácie je možné využiť pri všetkých položkách tlačítko [+] ktoré pridá ďalšie polužku vybraného typu (Práca, Vzdelanie, Schonosti, Telefón...). Po uložení formulára budú na uvedený e-mail zaslané odkazy na vytvorený životopis, a zobrazí sa stránka kde je možné si životopis prezrieť, alebo stiahnúť vo formáte PDF.</para>
+        </sect1>
+    </chapter>
+    <!-- creating vitae end-->
+    <!-- export to file start-->
+    <chapter lang="en">
+        <title>Export to file</title>
+        <para>Home page of vitae can be accessed via the unique link or main page(public vitae). On this page user can browse or export vitae into PDF(european curriculum vitae format - Europass) or XML file.</para>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+    </chapter>
+    <chapter lang="sk">
+        <title>Export životopisu</title>
+        <para>Na základnú stránku životopisu sa dá dostať pomocou odkazu alebo z úvodnej stránky (v prípade verejného životopisu). Na tejto stránke životopisu je možný okrem prezerania taktiež export priamo do formátu PDF alebo ako súbor XML. Výstup PDF zodpovedá európskemu štandardu ECV formát (european curriculum vitae format) známy tiež ako Europass. Súbor XML zodpovedá tejto schéme.</para>
+    </chapter>
+    <!-- export to file end-->
+    <!-- lost unique link start-->
+    <chapter lang="en">
+        <title>Lost unique link</title>
+        <para>In case of lost unique links, it is possible to request for send links again. Authentication is over e-mail, on this e-mail will be sent all links for all linked vitaes.</para>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+    </chapter>
+    <chapter lang="sk">
+        <title>Zabudnuté odkazy</title>
+        <para>V prípade zabudnutia odkazov na užívateľov životopis je možné na úvodnej stránke požiadať o opätovné zaslanie týchto informácií. Na autentizáciu je potrebné uviesť rovnaký e-mail ako pri tvorbe životopisu, a uživateľovi budú zaslané odkazy na všetky životopisy vytvorené uvedeným e-mailom.</para>
+    </chapter>
+    <!-- lost unique link end-->
+    <!-- editing and deleting vitae start-->
+    <chapter lang="en">
+        <title>Editing and deleting vitae</title>
+        <para>Vitae can be deleted via unique link for delete, which is sent with other links after creating vitae. Similarly, it is possible to edit vitae via link in e-mail, page to edit is same as page to create, but inputs are filled with previously inserted information.</para>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+    </chapter>
+    <chapter lang="sk">
+        <title>Editácia a mazanie životopisu</title>
+        <para>Životopis je možne zmazať pomocou odkazu, ktorý sa zasiela mailom pri vytvorení životopisu. Podobne je možne životopis editovať, po navštívení editačnej stránky uvedenej v e-maili sa zobrazí rovnaký formulár ako pri vytváraní životopisu a je možné upraviť potrebné informácie.</para>
+    </chapter>
+    <!-- editing and deleting vitae end-->
+    <!-- contact start-->
+    <chapter lang="en">
+        <title>Contact</title>
+        <para>For more information or some questions, you can visit Issues section on Github <ulink url="https://github.com/xardael/cvWebGen">project page</ulink>.</para>
+    </chapter>
+    <chapter lang="cs">
+        <title>...</title>
+        <para>...</para>
+    </chapter>
+    <chapter lang="sk">
+        <title>Kontakt</title>
+        <para>V prípade otázok využite sekciu Issues na Github <ulink url="https://github.com/xardael/cvWebGen">stránke projektu</ulink>.</para>
+    </chapter>
+    <!-- contact end-->
+</book>
